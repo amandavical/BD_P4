@@ -1,0 +1,17 @@
+Resultado da minha pesquisa sobre os seguintes conceitos de acordo com a bibliografia disponibilizada pelo professor:
+
+1) Dado
+-> É um fato que pode ser registrado e armazenado em algum meio. 
+
+2) Informação
+-> São os dados dentro de um contexto. 
+Por exemplo, os dados de determinado produto são usados em várias funções (Vendas, produção e compras) com sua informatização de tal forma que elas estão interligadas. 
+
+3) Arquivo Convencional
+-> O arquivo convencional (por exemplo, arquivo de texto) por hipótese gera um sistema isolado em que se cada uma das funções por informatizada de forma separada, sem considerar a informatização das demais funções, pode ocorrer que, para cada uma das funções, seja criado um arquivo separado do produto.
+Resumidamente, se houver 3 funções terá 3 arquivos e uma mesma informação pode se repetir nos 3 arquivos, o que causa dificuldades como problema de redundância de dados (ocorre quando uma determinada informação está representada no sistema em computador várias vezes) 
+especificamente a redundância não controlada dos dados (ocorre quando a responsabilidade pela manutenção da sincronia entre as diversas representações está com o usuário e não com o software) e esse tipo de redundância deve ser evitado,
+pois traz consigo vários tipos de problemas como entrada repetida da mesma informação e inconsistência de dados. A solução para evitar isso é o compartilhamento de dados por meio do sistema de gerência de banco de dados (SGBD) que forma um sistema integrado com dados compartilhados. 
+
+4) Banco de Dados
+-> Conjunto de dados integrados que tem por objetivo atender a uma comunidade de usuários. 
