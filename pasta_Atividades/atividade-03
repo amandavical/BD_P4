@@ -1,0 +1,13 @@
+Descreva as fases de um Projeto de Banco de Dados:
+1) Modelagem Conceitual
+É feito um modelo conceitual na forma de um DER.
+Esse modelo captura as necessidades da organização em termos de armazenamento de dados independentemente da implementação.
+
+2) Projeto Lógico
+A etapa do projeto lógico objetiva transformar o modelo conceitual obtido na primeira fase em um modelo lógico.
+O modelo conceitual define como o BD será implementado em um SGBD específico.
+
+3) Projeto Físico
+O modelo de BD é enriquecido de detalhes que influenciam no desempenho do BD, mas não interferem em sua funcionalidade.
+O modelo obtido nesse papo é o modelo físico do BD. É um processo contínuo, que ocorre mesmo depois do BD já estar implementado e em funcionamento.
+Esse processo normalmente é chamado de sintonia (tuning) de BD e essa etapa depende de um SGBD específico. 
