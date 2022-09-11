@@ -1,6 +1,6 @@
 1) Sistema Isolado
 Um sistema isolado consiste em arquivos convencionais que não são gerenciados por um SGBD, ou seja,
-os dados são isolados causando uma redundância não controlada de dados como entrada repetida da mesma informação e inconsistência de dados.
+os dados são separados para cada função causando uma redundância não controlada de dados como entrada repetida da mesma informação e inconsistência de dados.
 2) Sistema Integrado
 Já o sistema integrado é a solução para a redundância não controlada de dados pois há um compartilhamento de dados graças ao SGBD (software que incorpora as funções de definições, recuperação, e alteração em um BD) 
 que mantém grandes repositórios compartilhados de dados  
