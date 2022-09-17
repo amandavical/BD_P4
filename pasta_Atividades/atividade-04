@@ -1,0 +1,23 @@
+Defina os seguintes conceitos centrais da abordagem ER:
+
+a) ENTIDADE: Conjunto de objetos da realidade modelada sobre os quais deseja-se manter informações no banco de dados, ou seja, é o local onde coisas do mundo real, concreto ou abstrato, sobre os quais se deseja armazenar informações.
+Alguns exemplos de entidades são: pessoa (física ou jurídica), funcionários de uma empresa, cliente, produto, disciplina, evento etc. 
+No Diagrama Entidade-Relacionamento (DER) uma entidade é representada por um retângulo com o nome da entidade dentro desse retângulo ao centro.
+ 
+b) RELACIONAMENTO: Conjunto de associações entre as ocorrências do mundo real. No DER, um relacionamento é representado por um losango que liga as duas entidades.
+
+c) ATRIBUT0: Dado que é associado a cada ocorrência de uma entidade ou de um relacionamento.
+
+d) DOMÍNIO DE UM ATRIBUTO: O conjunto de valores de determinado atributo. Há várias linguagens para definir domínios de atributo, normalmente específicos de uma ferramenta CASE ou SGBD. 
+Nestas definições são combinados várias propriedades de valores, como tamanho em caracteres, tipos de valores (número,data..), enumeração de valores permitidos, etc. 
+Raramente domínios de valores aparecem na DER
+
+e) GENERALIZAÇÃO/ESPECIALIZAÇÃO: Consiste em uma entidade genérica e subconjuntos mais específicos,lembrando que a ocorrência da entidade genérica possui além de seus atributos os atributos da especialização.
+No DER a especialização é representada por um triângulo isósceles conectado às entidades especializadas e a genérica. A generalização/especialização pode ser classificada em dois tipos, total ou parcial, de acordo com a obrigatoriedade ou não de cada ocorrência da entidade especializada. 
+
+f) ENTIDADE ASSOCIATIVA: É a redefinição de um relacionamento, que passa a ser tratado como se fosse uma entidade.
+Sendo representado por um retângulo desenhado ao redor do relacionamento. 
+
+g) CARDIANALIDADE DE UM ATRIBUTO: Número (mínimo, máximo) de ocorrências da entidade através de relacionamentos.
+Cardinalidade máxima: cardinalidade máxima um (1) e cardinalidade máxima ilimitada, usualmente chamada de cardinalidade máxima “muitos” e referida pela letra n.
+Cardinalidade mínima: Cardinalidade um (1) recebe a denominação “associação obrigatória”, ou seja, a ocorrência da entidade “A” deve estar relacionada com uma ocorrência da entidade “B”. Já a cardinalidade zero (0) indica uma possibilidade de uma ocorrência da entidade “A” estar relacionada com uma ocorrência da entidade “B”.
