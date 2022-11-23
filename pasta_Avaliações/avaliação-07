@@ -1,0 +1,65 @@
+var sqlite3 = require('sqlite3');
+ 
+var db = new sqlite3.Database('BD_SCA_db');
+
+db.serialize(function() {
+
+// Create a table
+ db.run(`CREATE TABLE IF NOT EXISTS TB_ALUNO (
+    ID INTEGER PRIMARY KEY, 
+    NOME TEXT NOT NULL,
+    CPF TEXT NOT NULL
+ )`);
+  db.run(`CREATE TABLE IF NOT EXISTS TB_DISCIPLINA (
+    ID INTEGER PRIMARY KEY,
+    NOME TEXT 
+  )`);
+  db.run(`CREATE TABLE IF NOT EXISTS TB_PROFESSOR (
+     ID INTEGER PRIMARY KEY,
+     NOME TEXT 
+  )`);
+  db.run(`CREATE TABLE IF NOT EXISTS TB_MATRICULA (
+     ID INTEGER PRIMARY KEY,
+     ALUNO_ID INTEGER,
+     DISCIPLINA_ID INTEGER,
+     PROFESSOR_ID INTEGER,
+     FOREIGN KEY("ALUNO_ID") REFERENCES "TB_ALUNO"("ID"), 
+     FOREIGN KEY("DISCIPLINA_ID") REFERENCES "TB_DISCIPLINA"("ID"),
+     FOREIGN KEY("PROFESSOR_ID") REFERENCES "TB_PROFESSOR"("ID")
+  )`);
+  db.run(`CREATE TABLE IF NOT EXISTS TB_PROFESSOR_DISCIPLINA (
+     ID INTEGER PRIMARY KEY,
+     PROFESSOR_ID INTEGER,
+     DISCIPLINA_ID INTEGER,
+     FOREIGN KEY("PROFESSOR_ID") REFERENCES "TB_PROFESSOR"("ID"), 
+     FOREIGN KEY("DISCIPLINA_ID") REFERENCES "TB_DISCIPLINA"("ID")
+  )`);
+  db.run(`INSERT INTO TB_ALUNO (NOME, CPF)
+      VALUES ('Caio Vieira','258-453-983.62')`);
+        
+  db.run(`INSERT INTO TB_DISCIPLINA (NOME) 
+      VALUES ('Banco de Dados'), 
+             ('Rede de Computadores')`);
+
+  db.run(`INSERT INTO TB_PROFESSOR (NOME) 
+      VALUES ('Taveira'), 
+             ('Wendell')`);
+  
+  db.run(`INSERT INTO TB_PROFESSOR_DISCIPLINA (PROFESSOR_ID, DISCIPLINA_ID) 
+      VALUES (1,1), 
+             (2,1),
+             (2,2)`);
+
+// Query data from the table
+ db.each("SELECT ID, NOME, CPF FROM TB_ALUNO", function(err, row) {
+    console.log(row.ID + " : " + row.NOME + ", " + row.CPF);
+  });
+ db.each("SELECT ID, NOME FROM TB_DISCIPLINA", function(err, row) {
+    console.log(row.ID + " : " + row.NOME);
+  });
+  db.each("SELECT ID, NOME FROM TB_PROFESSOR", function(err, row) {
+    console.log(row.ID + " : " + row.NOME);
+  });
+});
+ 
+db.close();
